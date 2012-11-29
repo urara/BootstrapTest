@@ -1,0 +1,65 @@
+<h1>Listing items</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @items.each do |item| %>
+  <tr>
+    <td><%= item.name %></td>
+    <td><%= item.price %></td>
+    <td><%= link_to 'Show', item %></td>
+    <td><%= link_to 'Edit', edit_item_path(item) %></td>
+    <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<ul class="nav nav-tabs">
+	<li class="active">
+	<a href=#code>code</a>
+	</li>
+	<li><a href=#table>table</a></li>
+</ul>
+<div id="code" class="tab">
+	<p>（タブ1の中身。何でも記述できます。）</p>
+</div>
+<div id="table" class="tab">
+	<p>（タブ2の中身。HTMLタグも記述可能です。）</p>
+</div><br />
+
+<%= link_to 'New Item', new_item_path %>
+
+<div id="ui-tab">
+	<ul>
+		<li><a href="#tab-1">This is Tab 1</a></li>
+		<li><a href="#tab-2">Tab Two</a></li>
+		<li><a href="#tab-3">Tab Three</a></li>
+		<li><a href="#tab-4">Tab Four</a></li>
+	</ul>
+	<div id="tab-1">
+		<h3>This is a really simple tabbed interface</h3>
+		<p><img src="http://papermashup.com/demos/jquery-gallery/images/t1.png" width="120" height="120" class="thumbs"/> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur enim. Nullam id ligula in nisl tincidunt feugiat. Curabitur eu magna porttitor ligula bibendum rhoncus. Etiam dignissim. Duis lobortis porta risus. Quisque velit metus, dignissim in, rhoncus at, congue quis, mi. Praesent vel lorem. Suspendisse ut dolor at justo tristique dapibus. Morbi erat mi, rutrum a, aliquam nec, mattis semper, leo. Maecenas blandit risus vitae quam. Vivamus ut odio. Pellentesque mollis arcu nec metus. Nullam bibendum scelerisque turpis. Aliquam erat volutpat. <br/>
+		<a href="http://feeds2.feedburner.com/AshleyFord-Papermashupcom">Subscribe to my feed here</a> </p>
+	</div>
+	<div id="tab-2">
+		<h3>Tab 2</h3>
+		<p><img src="http://papermashup.com/demos/jquery-gallery/images/t2.png" width="120" height="120" class="thumbs"/> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur enim. Nullam id ligula in nisl tincidunt feugiat. Curabitur eu magna porttitor ligula bibendum rhoncus. Etiam dignissim. Duis lobortis porta risus. Quisque velit metus, dignissim in, rhoncus at, congue quis, mi. Praesent vel lorem. Suspendisse ut dolor at justo tristique dapibus. Morbi erat mi, rutrum a, aliquam nec <br/>
+		<a href="http://feeds2.feedburner.com/AshleyFord-Papermashupcom">Subscribe to my feed here</a></p>
+	</div>
+	<div id="tab-3">
+		<h3>Tab 3</h3>
+		<p><img src="http://papermashup.com/demos/jquery-gallery/images/t3.png" width="120" height="120" class="thumbs"/> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur enim. Nullam id ligula in nisl tincidunt feugiat. Curabitur eu magna porttitor ligula bibendum rhoncus. Etiam dignissim. Duis lobortis porta risus. Quisque velit metus, dignissim in, rhoncus at, congue quis, mi. Praesent vel lorem. Suspendisse ut dolor at justo tristique dapibus. Morbi erat mi, rutrum a, aliquam nec, mattis semper, leo. Maecenas blandit risus vitae quam. Vivamus ut odio.<br/>
+		<a href="http://feeds2.feedburner.com/AshleyFord-Papermashupcom">Subscribe to my feed here</a></p>
+	</div>
+	<div id="tab-4">
+		<h3>Tab 4</h3>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur enim. Nullam id ligula in nisl tincidunt feugiat. Curabitur eu magna porttitor ligula bibendum rhoncus. Etiam dignissim. Duis lobortis porta risus. Quisque velit metus, dignissim in, rhoncus at, congue quis, mi. Praesent vel lorem. Suspendisse ut dolor at justo tristique dapibus. Morbi erat mi, rutrum a, aliquam nec, mattis semper, leo. Maecenas blandit risus vitae quam. Vivamus ut odio. Pellentesque mollis arcu nec metus.<br/>
+		<a href="http://feeds2.feedburner.com/AshleyFord-Papermashupcom">Subscribe to my feed here</a></p>
+	</div>
+</div>
